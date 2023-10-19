@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    android:layout_marginBottom="8dp"
+    tools:context=".chatactivity">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        android:id="@+id/chatmessagerv"
+        tools:listitem="@layout/send_item_layoout"
+        app:layout_constraintTop_toBottomOf="@id/topbar"
+        app:layout_constraintBottom_toTopOf="@id/card"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:id="@+id/topbar"
+
+        android:background="@color/green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userprofileimage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+        <TextView
+            android:id="@+id/profilename"
+            android:hint="hello"
+            android:textColor="@color/white"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="8dp"
+        app:cardMaxElevation="16dp"
+
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sendbutton"
+        app:cardCornerRadius="26dp"
+        android:id="@+id/card"
+
+
+        >
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bac_bg"
+
+        android:textSize="16sp"
+
+        android:inputType="text"
+        android:hint="Message"
+        android:padding="6dp"
+        android:paddingStart="16dp"
+
+        />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+
+        android:id="@+id/sendbutton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+
+        android:padding="12dp"
+
+        android:background="@drawable/circular_bac_bg"
+        android:src="@drawable/baseline_send_24"
+        app:layout_constraintBottom_toBottomOf="@id/card"
+        app:layout_constraintTop_toTopOf="@id/card"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

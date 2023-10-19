@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ProfileActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green"
+        app:titleTextColor="@color/white"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <ProgressBar
+            android:id="@+id/pr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:indeterminate="true"
+            android:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/accountimage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            android:layout_gravity="start|center"
+            android:layout_margin="6dp"
+            android:src="@drawable/applogo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/addaccountimage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start|center"
+            android:padding="8dp"
+
+            android:src="@drawable/baseline_photo_camera_24"
+            android:background="@drawable/bac_bg4"
+            app:layout_constraintBottom_toBottomOf="@id/accountimage"
+            app:layout_constraintEnd_toEndOf="@id/accountimage"
+            />
+
+<!--        <TextView-->
+<!--            android:id="@+id/mystatus"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toEndOf="@id/profilestatus"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:text="My Status"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:maxLines="2"-->
+<!--            android:textSize="15sp"-->
+<!--            android:ellipsize="end"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tap"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toEndOf="@id/profilestatus"-->
+<!--            android:layout_marginTop="4dp"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/mystatus"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:text="Tap to add status update"-->
+<!--            android:textColor="#6D6D6D"-->
+<!--            android:maxLines="2"-->
+<!--            android:ellipsize="end"-->
+<!--            />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout1"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:paddingStart="8dp"
+        android:background="@drawable/chat_item_bac_bg"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilestatus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start|center"
+            android:layout_margin="6dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/baseline_account_circle_24"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/profilestatus"
+
+           app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="16dp"
+            android:text="Name"
+            android:textColor="#808080"
+
+            android:textSize="11sp"
+
+            />
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Gagan"
+            android:textColor="#1B1B1B"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toEndOf="@id/profilestatus"
+            app:layout_constraintTop_toBottomOf="@id/name"  />
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/username"
+            app:layout_constraintTop_toBottomOf="@id/username"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:text="This is not your username or pin. This\n name will be visible to your BeeChat contacts."
+            android:layout_marginTop="6dp"
+            android:textColor="#808080"
+
+            android:textSize="11sp"
+
+            />
+
+        <ImageView
+            android:id="@+id/editname"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="start|center"
+
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/baseline_mode_edit_outline_24"
+
+           app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout1">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/info"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start|center"
+            android:layout_margin="6dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/baseline_info_24"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/info"
+
+           app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="16dp"
+            android:text="About"
+            android:textColor="#808080"
+
+            android:textSize="11sp"
+
+            />
+        <TextView
+            android:id="@+id/aboutuser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Dream Big"
+            android:textColor="#1B1B1B"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/info"
+            app:layout_constraintTop_toBottomOf="@id/about"  />
+
+
+        <ImageView
+            android:id="@+id/editabout"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="start|center"
+
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/baseline_mode_edit_outline_24"
+
+           app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:paddingStart="8dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout2">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/call"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start|center"
+            android:layout_margin="6dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/baseline_call_24"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/call"
+
+           app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="16dp"
+            android:text="Call"
+            android:textColor="#808080"
+
+            android:textSize="11sp"
+
+            />
+        <TextView
+            android:id="@+id/usserphonenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="+9123335654fgb"
+            android:textColor="#1B1B1B"
+
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/call"
+            app:layout_constraintTop_toBottomOf="@id/phone"  />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
