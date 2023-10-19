@@ -1,6 +1,12 @@
 # BeeChat
-ChatRoom
+ChatRoom/One vs One chat room
 These are the output of the code:-
+This is android project,
+where i have used kotlin language to work on the backend.
+Firebase is used as a database.
+Push notifications are there.
+
+ 
 
 ![p11](https://github.com/GaganMaurya/BeeChat/assets/111219175/abb3ef79-c65a-4527-bff0-6174d29f37ad)
 
